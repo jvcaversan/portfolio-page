@@ -34,6 +34,7 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({ projects }) => {
         centeredSlides={true}
         slidesPerView={3}
         spaceBetween={30}
+        speed={1000}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
