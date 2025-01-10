@@ -1,9 +1,8 @@
 // src/types/Project.ts
 export interface Project {
-  id: string;
-  image?: string;
+  id: number;
   title: string;
   description?: string;
-  images?: string[];
-  github?: string;
+  imageUrl?: string;
+  githubUrl?: string;
 }
