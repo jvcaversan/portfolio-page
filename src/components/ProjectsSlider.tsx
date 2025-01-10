@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -16,21 +16,13 @@ interface ProjectsSliderProps {
 
 const ProjectsSlider: React.FC<ProjectsSliderProps> = ({ projects }) => {
   const swiperRef = useRef<any>(null);
-  const [loading, setLoading] = useState(true);
 
+  // Inicializa o Swiper após o componente ser montado
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1);
-
-    return () => clearTimeout(timer);
+    if (swiperRef.current) {
+      swiperRef.current.swiper.init(); // Força a inicialização do Swiper
+    }
   }, []);
-
-  if (loading) {
-    return (
-      <div className="h-64 flex items-center justify-center">Carregando...</div>
-    );
-  }
 
   return (
     <div className="py-12 px-8 overflow-visible">
@@ -54,6 +46,13 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({ projects }) => {
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
+        }}
+        style={{ opacity: 0 }} // Inicialmente invisível
+        onAfterInit={() => {
+          // Torna o Swiper visível após a inicialização
+          if (swiperRef.current) {
+            swiperRef.current.style.opacity = 1;
+          }
         }}
       >
         {projects.map((project, index) => (

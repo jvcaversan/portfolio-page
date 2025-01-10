@@ -27,16 +27,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isActive }) => {
       <div className="p-4">
         <h2 className="text-xl font-bold mb-2">{project.title}</h2>
         <p className="text-gray-600 mb-4">{project.description}</p>
-        {project.githubUrl && (
-          <Link
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            Ver no GitHub
-          </Link>
-        )}
       </div>
     </div>
   );
