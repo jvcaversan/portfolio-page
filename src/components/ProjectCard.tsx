@@ -12,7 +12,7 @@ export default function ProjectCard({ project, isActive }: ProjectCardProps) {
   return (
     <Link href={`/projetos/${project.id}`} passHref>
       <div
-        className={`bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-all duration-300 ${
+        className={`bg-gray-50 rounded-lg shadow-md overflow-hidden flex flex-col transition-all duration-300 ${
           isActive ? "scale-105 z-10 shadow-lg" : "scale-95 opacity-80"
         }`}
         style={{
@@ -20,7 +20,7 @@ export default function ProjectCard({ project, isActive }: ProjectCardProps) {
           height: "450px",
         }}
       >
-        <div className="relative h-72 bg-white flex items-center justify-center overflow-hidden">
+        <div className="relative h-72 bg-gray-50 flex items-center justify-center overflow-hidden">
           <div className="relative w-[129%] h-[129%]">
             <Image
               src={project.imageUrl || "/placeholder.png"}

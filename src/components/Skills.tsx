@@ -20,7 +20,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-gray-100">
+    <section id="skills" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
           Minhas Habilidades

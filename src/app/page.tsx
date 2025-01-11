@@ -1,6 +1,5 @@
 import AboutMe from "@/components/AboutMe";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import ProjectsSlider from "@/components/ProjectsSlider";
 import Skills from "@/components/Skills";
 
@@ -9,7 +8,6 @@ import projects from "@/data/projects";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      <Header />
       <main>
         <AboutMe />
         <ProjectsSlider projects={projects} />

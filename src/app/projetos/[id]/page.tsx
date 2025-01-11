@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import Header from "@/components/Header";
 import projects from "@/data/projects";
 import Footer from "@/components/Footer";
 
@@ -15,12 +14,11 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
       <main className="flex-grow container mx-auto px-4 py-6">
         <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
         <div className="mb-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="relative w-full aspect-[9/16] max-w-[200px] mx-auto overflow-hidden rounded-lg transition-transform duration-300 hover:scale-150">
+            <div className="relative w-full aspect-[9/16] max-w-[200px] mx-auto overflow-hidden rounded-lg transition-transform duration-300 hover:scale-125">
               <Image
                 src={project.imageUrl || "/placeholder.png"}
                 alt={project.title}
@@ -33,7 +31,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               project.additionalImages.map((img, index) => (
                 <div
                   key={index}
-                  className="relative w-full aspect-[9/16] max-w-[200px] mx-auto overflow-hidden rounded-lg transition-transform duration-300 hover:scale-150"
+                  className="relative w-full aspect-[9/16] max-w-[200px] mx-auto overflow-hidden rounded-lg transition-transform duration-300 hover:scale-125"
                 >
                   <Image
                     src={img}
