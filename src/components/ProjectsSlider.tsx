@@ -56,7 +56,7 @@ export default function ProjectsSlider({ projects }: ProjectsSliderProps) {
               },
             }}
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-            className="mySwiper"
+            className="mySwiper custom-pagination"
             style={{ opacity: 0 }}
             onAfterInit={() => {
               if (swiperRef.current) {
