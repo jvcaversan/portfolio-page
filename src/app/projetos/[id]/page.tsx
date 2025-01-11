@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import Header from "@/components/Header";
-
 import projects from "@/data/projects";
 import Footer from "@/components/Footer";
 
@@ -17,16 +16,34 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-8">
+      <main className="flex-grow container mx-auto px-4 py-6">
         <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-        <div className="mb-8">
-          <Image
-            src={project.imageUrl || "/placeholder.png"}
-            alt={project.title}
-            width={800}
-            height={400}
-            className="rounded-lg object-cover w-full"
-          />
+        <div className="mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="relative w-full aspect-[9/16] max-w-[200px] mx-auto overflow-hidden rounded-lg transition-transform duration-300 hover:scale-150">
+              <Image
+                src={project.imageUrl || "/placeholder.png"}
+                alt={project.title}
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            {project.additionalImages &&
+              project.additionalImages.map((img, index) => (
+                <div
+                  key={index}
+                  className="relative w-full aspect-[9/16] max-w-[200px] mx-auto overflow-hidden rounded-lg transition-transform duration-300 hover:scale-150"
+                >
+                  <Image
+                    src={img}
+                    alt={`${project.title} - Image ${index + 1}`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+          </div>
         </div>
         <p className="text-lg mb-6">{project.description}</p>
         <div className="mb-6">
@@ -44,25 +61,6 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             ))}
           </div>
         </div>
-        {project.additionalImages && (
-          <div className="mb-8">
-            <h2 className="text-xl font-semibold mb-4">
-              Mais imagens do projeto:
-            </h2>
-            <div className="grid grid-cols-2 gap-4">
-              {project.additionalImages.map((img, index) => (
-                <Image
-                  key={index}
-                  src={img}
-                  alt={`${project.title} - Image ${index + 1}`}
-                  width={400}
-                  height={300}
-                  className="rounded-lg object-cover"
-                />
-              ))}
-            </div>
-          </div>
-        )}
         <div className="flex items-center space-x-4">
           <a
             href={project.githubUrl}

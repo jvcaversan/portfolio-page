@@ -16,21 +16,25 @@ export default function ProjectCard({ project, isActive }: ProjectCardProps) {
           isActive ? "scale-105 z-10 shadow-lg" : "scale-95 opacity-80"
         }`}
         style={{
-          width: "300px", // Largura do card
-          height: "400px", // Altura do card
+          width: "300px",
+          height: "450px",
         }}
       >
-        <div className="relative h-40">
-          <Image
-            src={project.imageUrl || "/placeholder.png"}
-            alt={project.title}
-            layout="fill"
-            objectFit="cover"
-          />
+        <div className="relative h-72 bg-white flex items-center justify-center overflow-hidden">
+          <div className="relative w-[129%] h-[129%]">
+            <Image
+              src={project.imageUrl || "/placeholder.png"}
+              alt={project.title}
+              layout="fill"
+              objectFit="contain"
+              className="p-2"
+            />
+          </div>
         </div>
-        <div className="p-4 flex-grow flex flex-col justify-between">
-          <div className="mt-16">
-            <h3 className="text-lg font-bold mb-2 text-gray-900 line-clamp-1">
+
+        <div className="p-3 flex-grow flex flex-col justify-between">
+          <div>
+            <h3 className="text-lg font-bold mb-2 text-gray-900 line-clamp-1 text-center">
               {project.title}
             </h3>
             <p className="text-sm text-gray-600 mb-2 line-clamp-3">

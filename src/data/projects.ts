@@ -19,7 +19,7 @@ const projects: Project[] = [
     title: "CookingApp",
     description:
       "Aplicativo de Receitas, onde você pode criar e compartilhar suas receitas! Explore novas culinárias e aprenda com chefs amadores e profissionais.",
-    imageUrl: "/images/cookingapp-main.png",
+    imageUrl: "/images/cooking.png",
     githubUrl: "https://github.com/jvcaversan/recipe-app-job",
     additionalImages: [
       "/images/cookingapp-recipe-list.png",
