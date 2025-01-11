@@ -1,30 +1,50 @@
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const Header = () => {
+export default function Header() {
   return (
-    <header className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-6 px-8 shadow-xl">
+    <header className="bg-white shadow-md py-4 px-8 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <div>
-          <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-            João Vitor Caversan
-          </h1>
-          <p className="text-sm text-gray-300 mt-1">
-            Desenvolvedor Mobile React Native
-          </p>
-        </div>
-        <Link
-          href="https://github.com/jvcaversan"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center space-x-3 bg-gray-700 hover:bg-gray-600 transition-colors rounded-lg px-4 py-2 shadow-md"
-        >
-          <FaGithub className="w-6 h-6" />
-          <span className="text-sm font-medium">GitHub</span>
+        <Link href="/" className="text-2xl font-bold text-blue-600">
+          JVC
         </Link>
+        <nav className="flex items-center space-x-6">
+          <Link
+            href="/#about"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+          >
+            Sobre Mim
+          </Link>
+          <Link
+            href="/#projects"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+          >
+            Projetos
+          </Link>
+          <Link
+            href="/#skills"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+          >
+            Habilidades
+          </Link>
+          <a
+            href="https://github.com/jvcaversan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+          >
+            <FaGithub className="w-6 h-6" />
+          </a>
+          <a
+            href="https://linkedin.com/in/joaovitorcaversan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+          >
+            <FaLinkedin className="w-6 h-6" />
+          </a>
+        </nav>
       </div>
     </header>
   );
-};
-
-export default Header;
+}
