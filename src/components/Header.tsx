@@ -3,9 +3,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-md py-4 px-8 z-50 mb-8">
+    <header className="bg-white shadow-md py-4 px-4 z-50 mb-8 gap-2">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-blue-600">
+        <Link href="/" className="text-2xl font-bold text-blue-600 mr-2">
           JVC
         </Link>
         <nav className="flex items-center space-x-6">
