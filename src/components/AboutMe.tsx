@@ -10,7 +10,7 @@ export default function AboutMe() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">
           <div className="w-48 h-48 relative">
             <Image
-              src="/images/profile.jpg" // Substitua pelo caminho da sua foto
+              src="/images/profile.jpg"
               alt="João Vitor Caversan"
               layout="fill"
               objectFit="cover"

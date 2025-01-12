@@ -26,12 +26,12 @@ export default function ProjectsSlider({ projects }: ProjectsSliderProps) {
   }, []);
 
   return (
-    <section id="projects" className="py-10 bg-gray-50">
+    <section id="projects" className="py-7 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-5 text-center text-gray-900">
           Meus Projetos
         </h2>
-        <div>
+        <div className="mt-9">
           <Swiper
             ref={swiperRef}
             modules={[Navigation, Pagination, Autoplay]}
@@ -46,13 +46,17 @@ export default function ProjectsSlider({ projects }: ProjectsSliderProps) {
               disableOnInteraction: false,
             }}
             breakpoints={{
-              640: {
+              480: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              768: {
                 slidesPerView: 2,
-                spaceBetween: 8,
+                spaceBetween: 15,
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 10,
+                spaceBetween: 20,
               },
             }}
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}

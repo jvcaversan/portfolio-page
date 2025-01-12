@@ -20,12 +20,12 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="bg-white py-5">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-20 text-gray-800">
           Minhas Habilidades
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
           {skills.map((skill) => (
             <div key={skill.name} className="flex flex-col items-center">
               <skill.icon className={`text-5xl mb-2 ${skill.color}`} />

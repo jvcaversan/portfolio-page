@@ -18,7 +18,7 @@ export default function Footer() {
               <FaGithub className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com/in/joaovitorcaversan"
+              href="https://www.linkedin.com/in/jo%C3%A3o-vitor-caversan-tosta-081b05182/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 transition-colors"
@@ -26,7 +26,7 @@ export default function Footer() {
               <FaLinkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:jvcaversan@gmail.com"
+              href="mailto:joaovitorcaversan@gmail.com"
               className="hover:text-blue-600 transition-colors"
             >
               <FaEnvelope className="w-6 h-6" />
