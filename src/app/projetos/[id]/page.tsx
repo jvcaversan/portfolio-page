@@ -5,7 +5,13 @@ import { FaGithub } from "react-icons/fa";
 import projects from "@/data/projects";
 import Footer from "@/components/Footer";
 
-export default function ProjectDetail({ params }: { params: { id: string } }) {
+interface ProjectDetailParams {
+  params: {
+    id: string;
+  };
+}
+
+export default function ProjectDetail({ params }: ProjectDetailParams) {
   const project = projects.find((p) => p.id === Number(params.id));
 
   if (!project) {
