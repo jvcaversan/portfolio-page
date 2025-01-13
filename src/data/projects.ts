@@ -35,7 +35,13 @@ const projects: Project[] = [
       "/images/cooking/tela-editar-receita.png",
       "/images/cooking/tela-excluir-receita.png",
     ],
-    technologies: ["React Native", "Expo", "Supabase", "Typescript"],
+    technologies: [
+      "React Native",
+      "Expo",
+      "Supabase",
+      "Typescript",
+      "Tanstack-ReactQuery",
+    ],
   },
   {
     id: 3,
@@ -44,7 +50,22 @@ const projects: Project[] = [
       "Aplicativo de criação e gerenciamento de partidas de futebol, podendo efetuar criação de seus próprios clubes, invitar jogadores, criação de partidas personalizadas, sorteio de times baseado em nota de jogadores e posições, geração de estatísticas individuais e da partida no geral.",
     imageUrl: "/images/sportsapp/tela-grupo-details.png",
     githubUrl: "https://github.com/jvcaversan/sports-app",
-    technologies: ["React Native", "TypeScript", "Expo", "Supabase"],
+    additionalImages: [
+      "/images/sportsapp/tela-home.png",
+      "/images/sportsapp/tela-grupos.png",
+      "/images/sportsapp/tela-grupo-criacao-partida.png",
+      "/images/sportsapp/tela-grupos-details-membros.png",
+      "/images/sportsapp/tela-jogadoreseescalacaonota.png",
+      "/images/sportsapp/tela-estatisticasjogador.png",
+      "/images/sportsapp/tela-perfil.png",
+    ],
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Expo",
+      "Supabase",
+      "Tanstack-ReactQuery",
+    ],
   },
   // {
   //   id: 4,
