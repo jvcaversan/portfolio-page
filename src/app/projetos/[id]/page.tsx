@@ -5,14 +5,15 @@ import { FaGithub } from "react-icons/fa";
 import projects from "@/data/projects";
 import Footer from "@/components/Footer";
 
-interface ProjectDetailParams {
-  params: {
+interface PageProps {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
-
-export default function ProjectDetail({ params }: ProjectDetailParams) {
-  const project = projects.find((p) => p.id === Number(params.id));
+export default async function ProjectDetail({ params }: PageProps) {
+  const resolvedParams = await params;
+  const projectId = Number(resolvedParams.id);
+  const project = projects.find((p) => p.id === projectId);
 
   if (!project) {
     notFound();
