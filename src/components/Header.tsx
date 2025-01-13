@@ -36,7 +36,7 @@ export default function Header() {
             <FaGithub className="w-6 h-6" />
           </a>
           <a
-            href="https://linkedin.com/in/joaovitorcaversan"
+            href="https://www.linkedin.com/in/jo%C3%A3o-vitor-caversan-tosta-081b05182/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-700 hover:text-blue-600 transition-colors"

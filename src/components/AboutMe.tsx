@@ -1,32 +1,39 @@
-import Image from "next/image";
-
 export default function AboutMe() {
   return (
-    <section id="about" className="py-16 md:py-28 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-16">
-          <div className="w-64 h-64 lg:w-1/3 relative flex-shrink-0">
-            <Image
-              src="/images/profile.jpg"
-              alt="João Vitor Caversan"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-full"
-            />
-          </div>
-          <div className="max-w-xl lg:w-1/2 text-center lg:text-left">
-            <p className="text-lg text-gray-700 mb-4">
-              Olá! Eu sou um desenvolvedor mobile especializado em React Native.
-              Tenho experiência em criar aplicativos escaláveis e de alta
-              performance, com foco em experiência do usuário e boas práticas de
-              desenvolvimento.
-            </p>
-            <p className="text-lg text-gray-700">
-              Adoro aprender novas tecnologias e enfrentar desafios que me
-              permitem crescer profissionalmente. Minha paixão pela programação
-              me motiva a estar sempre atualizado com as últimas tendências e
-              ferramentas do mercado.
-            </p>
+    <section
+      id="about"
+      className="py-12 md:py-14 bg-gradient-to-b from-white via-gray-50 to-gray-100"
+    >
+      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+        <div className="flex flex-col items-center text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight mb-4">
+            João Vitor Caversan
+          </h1>
+          <h2 className="text-xl md:text-2xl font-medium text-gray-600 mb-6">
+            Desenvolvedor Mobile Especializado em React Native
+          </h2>
+
+          <div className="h-1 w-16 bg-blue-500 rounded-full mb-6"></div>
+
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mb-4 leading-relaxed">
+            Olá! Sou um desenvolvedor mobile com paixão por criar aplicativos
+            escaláveis e de alta performance. Minha experiência inclui a
+            construção de soluções modernas, com foco em experiência do usuário,
+            design responsivo e boas práticas de desenvolvimento.
+          </p>
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl leading-relaxed">
+            Adoro aprender novas tecnologias e encarar desafios que impulsionem
+            meu crescimento profissional. Estou sempre em busca de inovação,
+            acompanhando as tendências e ferramentas mais recentes do mercado.
+          </p>
+
+          <div className="mt-8">
+            <a
+              href="#projects"
+              className="px-6 py-3 text-lg font-semibold text-white bg-blue-500 hover:bg-blue-600 rounded-lg shadow-md transition-all duration-300"
+            >
+              Veja Meus Projetos
+            </a>
           </div>
         </div>
       </div>

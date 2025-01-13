@@ -6,54 +6,64 @@ const projects: Project[] = [
     title: "FinanApp",
     description:
       "Aplicativo para gerenciamento de finanças pessoais. Controle suas despesas, receitas e investimentos de forma fácil e intuitiva.",
-    imageUrl: "/images/finanapp-main.png",
+    imageUrl: "/images/finanapp/tela-home.png",
     githubUrl: "https://github.com/jvcaversan/financial-app",
     additionalImages: [
-      "/images/finanapp-dashboard.png",
-      "/images/finanapp-transactions.png",
+      "/images/finanapp/tela-new-receita.png",
+      "/images/finanapp/tela-edit-income.png",
+      "/images/finanapp/tela-transacoes.png",
     ],
-    technologies: ["React Native", "Redux", "Firebase"],
+    technologies: [
+      "React Native",
+      "Expo",
+      "Typescript",
+      "Drizzle ORM",
+      "SQLite",
+    ],
   },
   {
     id: 2,
     title: "CookingApp",
     description:
       "Aplicativo de Receitas, onde você pode criar e compartilhar suas receitas! Explore novas culinárias e aprenda com chefs amadores e profissionais.",
-    imageUrl: "/images/cooking.png",
+    imageUrl: "/images/cooking/cooking.png",
     githubUrl: "https://github.com/jvcaversan/recipe-app-job",
     additionalImages: [
-      "/images/cookingapp-recipe-list.png",
-      "/images/cookingapp-recipe-detail.png",
+      "/images/cooking/tela-home.png",
+      "/images/cooking/tela-receita.png",
+      "/images/cooking/tela-nova-receita.png",
+      "/images/cooking/tela-editar-receita.png",
+      "/images/cooking/tela-excluir-receita.png",
     ],
-    technologies: ["React Native", "GraphQL", "MongoDB"],
+    technologies: ["React Native", "Expo", "Supabase", "Typescript"],
   },
   {
     id: 3,
-    title: "TaskMaster",
+    title: "Sports-App",
     description:
-      "Aplicativo de gerenciamento de tarefas com recursos avançados de priorização e categorização.",
-    imageUrl: "/images/taskmaster-main.png",
-    githubUrl: "https://github.com/jvcaversan/taskmaster",
-    technologies: ["React Native", "TypeScript", "AsyncStorage"],
+      "Aplicativo de criação e gerenciamento de partidas de futebol, podendo efetuar criação de seus próprios clubes, invitar jogadores, criação de partidas personalizadas, sorteio de times baseado em nota de jogadores e posições, geração de estatísticas individuais e da partida no geral.",
+    imageUrl: "/images/sportsapp/tela-grupo-details.png",
+    githubUrl: "https://github.com/jvcaversan/sports-app",
+    technologies: ["React Native", "TypeScript", "Expo", "Supabase"],
   },
-  {
-    id: 4,
-    title: "FitTrack",
-    description:
-      "Aplicativo de acompanhamento de exercícios e nutrição para entusiastas de fitness.",
-    imageUrl: "/images/fittrack-main.png",
-    githubUrl: "https://github.com/jvcaversan/fittrack",
-    technologies: ["React Native", "Redux Toolkit", "Firebase"],
-  },
-  {
-    id: 5,
-    title: "WeatherNow",
-    description:
-      "Aplicativo de previsão do tempo com interface intuitiva e dados em tempo real.",
-    imageUrl: "/images/weathernow-main.png",
-    githubUrl: "https://github.com/jvcaversan/weathernow",
-    technologies: ["React Native", "OpenWeatherMap API", "Geolocation"],
-  },
+  // {
+  //   id: 4,
+  //   title: "FitTrack",
+  //   description:
+  //     "Aplicativo de acompanhamento de exercícios e nutrição para entusiastas de fitness.",
+  //   imageUrl: "/images/fittrack-main.png",
+  //   githubUrl: "https://github.com/jvcaversan/fittrack",
+  //   technologies: ["React Native", "Redux Toolkit", "Firebase"],
+  // },
+  // {
+  //   id: 5,
+  //   title: "WeatherNow",
+  //   description:
+  //     "Aplicativo de previsão do tempo com interface intuitiva e dados em tempo real.",
+  //   imageUrl: "/images/weathernow-main.png",
+  //   githubUrl: "https://github.com/jvcaversan/weathernow",
+  //   technologies: ["React Native", "OpenWeatherMap API", "Geolocation"],
+  // },
 ];
 
 export default projects;

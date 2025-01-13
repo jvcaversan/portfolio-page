@@ -1,52 +1,44 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import { Project } from "@/types/Project";
 import ProjectCard from "./ProjectCard";
-import "@/styles/globals.css";
+import { Project } from "@/types/Project";
 
 interface ProjectsSliderProps {
   projects: Project[];
 }
 
 export default function ProjectsSlider({ projects }: ProjectsSliderProps) {
-  const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.init();
-    }
-  }, []);
-
   return (
-    <section id="projects" className="py-7 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-5 text-center text-gray-900">
+    <section id="projects" className="py-8 bg-gray-50">
+      <div className="container mx-auto px-4 bg-gray-50">
+        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">
           Meus Projetos
         </h2>
-        <div className="mt-9">
+        <div className="mt-8">
           <Swiper
-            ref={swiperRef}
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={1}
-            slidesPerView={1}
-            centeredSlides={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            spaceBetween={20}
+            slidesPerView={3}
+            freeMode={true}
             loop={true}
-            navigation
-            pagination={{ clickable: true }}
             autoplay={{
-              delay: 5000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
+            pagination={{ clickable: true }}
+            style={{ paddingBottom: "40px" }}
+            navigation
             breakpoints={{
-              480: {
+              320: {
                 slidesPerView: 1,
                 spaceBetween: 10,
               },
@@ -58,14 +50,6 @@ export default function ProjectsSlider({ projects }: ProjectsSliderProps) {
                 slidesPerView: 3,
                 spaceBetween: 20,
               },
-            }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-            className="mySwiper custom-pagination"
-            style={{ opacity: 0 }}
-            onAfterInit={() => {
-              if (swiperRef.current) {
-                swiperRef.current.style.opacity = 1;
-              }
             }}
           >
             {projects.map((project, index) => (
